@@ -1,13 +1,20 @@
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
 .grid-container{
     display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(24,  auto);
-    grid-auto-rows:50px
     row-gap: 0px;
     column-gap: 0px;
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    border: 1px solid black;
+    box-shadow: 4px 4px 10px 5px rgba(0,0,0,0.26);
 }
 .cell{
-    
     border: 1px solid black;
-    height: 50px;
 }
