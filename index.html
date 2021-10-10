@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-e-sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-section">
         <div id="panel" class="tools-container">
             <h1>Pixel Canvas</h1>
-            <input type="color" name="pen" id="pen-color-panel">
-            <input type="color" name="bg" id="bg-color-panel">
+            <h2>Pen Color</h2>
+            <input class="color_panel" type="color" name="pen" id="pen-color-panel">
+            <h2>Canvas Color</h2>
+            <input value="#ffffff" class="color_panel" type="color" name="bg" id="bg-color-panel">
             <div class="grid-toggle-container" id="grid-toggle-container">
-                <label class="switch">
-                    <input id="grid-toggle" type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-                <input type="color" name="bg" id="grid-color-panel">
+                <div>
+                    <h2>Show/Hide Grid</h2>
+                    <label class="switch">
+                        <input id="grid-toggle" type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <input value="#DDDDDD" class="color_panel" type="color" name="bg" id="grid-color-panel">
+
             </div>
             <div class="grid-toggle-container">
-                <input id="cells-range" min="3" max="100" value="32" type="range">
-                <button id="create-grid" disabled="disabled">Create grid</button>
+                <input class="range" id="cells-range" min="3" max="100" value="32" type="range">
+                <button class="button"id="create-grid" disabled="disabled">Create grid</button>
             </div>
             <div>
-                <button id="clear">Clear</button>
-                <button id="reset">Reset</button>
+                <button class="button"id="clear">Clear</button>
+                <button class="button"id="reset">Reset</button>
             </div>
             <div></div>
             <div></div>

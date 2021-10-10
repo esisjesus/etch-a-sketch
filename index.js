@@ -1,5 +1,9 @@
 function initEditor(){
     const globalConfig = {
+        defaultPen: "#000000",
+        defaultBg: "#ffffff",
+        defaultGrid: "#6b6b6b3b",
+        defaultCells: 32,
         penColor: "#000000",
         bgColor: "#ffffff",
         gridColor: "#6b6b6b3b",
@@ -62,7 +66,14 @@ function initEditor(){
 
     const reset = document.getElementById("reset")
     const clear = document.getElementById("clear")
-    reset.addEventListener("click", createGrid)
+    reset.addEventListener("click", ()=>{
+        globalConfig.bgColor = globalConfig.defaultBg
+        globalConfig.penColor = globalConfig.defaultPen
+        globalConfig.gridColor = globalConfig.defaultGrid
+        globalConfig.cellsAmount = globalConfig.defaultCells
+
+        createGrid()
+    })
     clear.addEventListener("click", ()=>{
         const cells = document.querySelectorAll(".cell")
         cells.forEach(cell=>{
@@ -88,6 +99,7 @@ function initEditor(){
         }
         grid.style.gridTemplateColumns = `repeat(${globalConfig.cellsAmount}, 1fr)`
         grid.style.gridTemplateRows = `repeat(${globalConfig.cellsAmount}, 1fr)`
+        grid.style.backgroundColor = globalConfig.bgColor
         panel.addEventListener("mouseup", finishStroke)
     }
     
