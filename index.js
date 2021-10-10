@@ -100,6 +100,7 @@ function initEditor(){
         grid.style.gridTemplateColumns = `repeat(${globalConfig.cellsAmount}, 1fr)`
         grid.style.gridTemplateRows = `repeat(${globalConfig.cellsAmount}, 1fr)`
         grid.style.backgroundColor = globalConfig.bgColor
+        gridColorInput.style.display = "block"
         panel.addEventListener("mouseup", finishStroke)
     }
     
