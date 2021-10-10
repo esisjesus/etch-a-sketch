@@ -57,13 +57,26 @@ function initEditor(){
         gridButton.disabled = false
         gridButton.innerText = `Create ${globalConfig.cellsAmount} x ${globalConfig.cellsAmount} grid`
     }
+    
+    // Clear y Reset
 
+    const reset = document.getElementById("reset")
+    const clear = document.getElementById("clear")
+    reset.addEventListener("click", createGrid)
+    clear.addEventListener("click", ()=>{
+        const cells = document.querySelectorAll(".cell")
+        cells.forEach(cell=>{
+            cell.style.backgroundColor = "transparent"
+        })
+    })
 
 
     // GRID, CELLS AND STROKES CREATION FUNCTIONS:
     function createGrid(){
         const grid = document.getElementById("container")
         const panel = document.getElementById("panel")
+        gridButton.innerText = "Create grid"
+        gridButton.disabled = true
         grid.replaceChildren()
         for(let i = 0; i < globalConfig.cellsAmount*globalConfig.cellsAmount; i++){
             let gridElement = document.createElement('div')
