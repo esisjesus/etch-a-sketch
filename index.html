@@ -13,6 +13,17 @@
             <h1>Pixel Web Art</h1>
             <input type="color" name="pen" id="pen-color-panel">
             <input type="color" name="bg" id="bg-color-panel">
+            <div class="grid-toggle-container" id="grid-toggle-container">
+                <label class="switch">
+                    <input id="grid-toggle" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                <input type="color" name="bg" id="grid-color-panel">
+            </div>
+            <div class="grid-toggle-container">
+                <input id="cells-range" min="3" max="100" value="32" type="range">
+                <button id="create-grid" disabled="disabled">Create grid</button>
+            </div>
             <div>
                 <div></div>
                 <div></div>
