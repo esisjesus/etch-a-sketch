@@ -101,6 +101,7 @@ function initEditor(){
         grid.style.gridTemplateRows = `repeat(${globalConfig.cellsAmount}, 1fr)`
         grid.style.backgroundColor = globalConfig.bgColor
         gridColorInput.style.display = "block"
+        gridToggle.checked = true
         panel.addEventListener("mouseup", finishStroke)
     }
     
